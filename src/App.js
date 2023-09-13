@@ -28,7 +28,7 @@ function App() {
     const net = await facemesh.load(facemesh.SupportedPackages.mediapipeFacemesh);
     setInterval(() => {
       detect(net);
-    }, 10);
+    }, 1000);
   };
   // ...
 
@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p> medidas </p>
+        <p> medidas  </p>
         <Webcam
           ref={webcamRef}
           style={{
