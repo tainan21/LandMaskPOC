@@ -1,14 +1,4 @@
 
-// 1. Install dependencies DONE
-// 2. Import dependencies DONE
-// 3. Setup webcam and canvas DONE
-// 4. Define references to those DONE
-// 5. Load posenet DONE
-// 6. Detect function DONE
-// 7. Drawing utilities from tensorflow DONE
-// 8. Draw functions DONE
-
-// Face Mesh - https://github.com/tensorflow/tfjs-models/tree/master/facemesh
 
 import React, { useRef, useEffect } from "react";
 import "./App.css";
@@ -34,12 +24,7 @@ function App() {
 
   //  Load posenet
   const runFacemesh = async () => {
-    // OLD MODEL
-    // const net = await facemesh.load({
-    //   inputResolution: { width: 640, height: 480 },
-    //   scale: 0.8,
-    // });
-    // NEW MODEL
+
     const net = await facemesh.load(facemesh.SupportedPackages.mediapipeFacemesh);
     setInterval(() => {
       detect(net);
@@ -80,6 +65,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p> medidas </p>
         <Webcam
           ref={webcamRef}
           style={{
